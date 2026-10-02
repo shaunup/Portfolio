@@ -7,6 +7,11 @@ import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import "./globals.css";
 
+// Runs in the browser before React hydrates to apply the stored theme class
+// and prevent a flash of unstyled content. Placed in a Server Component so
+// React 19 does not warn about scripts inside client component trees.
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme:dark)').matches;if(t==='dark'||((!t||t==='system')&&d)){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}}catch(e){}})();`;
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -113,12 +118,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-sans antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange={false}
-        >
+        {/* Script is a direct child of this Server Component — no React 19 warning */}
+        <script
+          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+          suppressHydrationWarning
+        />
+        <ThemeProvider defaultTheme="system">
           <a href="#main-content" className="skip-link">
             Skip to main content
           </a>
