@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, FileText, Download, Circle } from "lucide-react";
+import { ArrowRight, Download, Circle } from "lucide-react";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { profile } from "@/content/profile";
 import { cn } from "@/lib/utils";

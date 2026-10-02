@@ -338,5 +338,5 @@ export function getFeaturedProjects(): Project[] {
 export function getProjectsByCategory(category: string): Project[] {
   if (category === "all") return projects;
   if (category === "featured") return getFeaturedProjects();
-  return projects.filter((p) => p.categories.includes(category as any));
+  return projects.filter((p) => p.categories.includes(category as string & typeof p.categories[number]));
 }

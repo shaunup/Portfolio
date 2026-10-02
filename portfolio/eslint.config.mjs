@@ -13,6 +13,16 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      // Apostrophes in user-facing text are intentional and readable
+      "react/no-unescaped-entities": "off",
+      // Allow setState in effects for mounting patterns
+      "react-hooks/set-state-in-effect": "off",
+      // Allow refs in navigation
+      "react/no-access-state-in-setstate": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

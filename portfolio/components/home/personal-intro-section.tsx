@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { FadeUp } from "@/components/ui/motion-wrapper";

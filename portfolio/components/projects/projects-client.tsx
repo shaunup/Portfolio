@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useTransition, useEffect } from "react";
+import React, { useState, useCallback, useTransition } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Search, RotateCcw, SlidersHorizontal } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -44,7 +44,7 @@ function filterAndSort(
   if (category === "featured") {
     filtered = filtered.filter((p) => p.featured);
   } else if (category !== "all") {
-    filtered = filtered.filter((p) => p.categories.includes(category as any));
+    filtered = filtered.filter((p) => p.categories.includes(category as string & typeof p.categories[number]));
   }
 
   // Search
@@ -80,7 +80,7 @@ function filterAndSort(
 export function ProjectsClientPage({ projects }: { projects: Project[] }) {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const [category, setCategory] = useState<Category>(
     (searchParams.get("category") as Category) || "all"

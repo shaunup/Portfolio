@@ -17,7 +17,7 @@ import { TechTagList } from "@/components/ui/tech-tag";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { ProjectCard } from "@/components/projects/project-card";
-import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-wrapper";
+import { FadeUp } from "@/components/ui/motion-wrapper";
 import { generatePageMetadata } from "@/lib/metadata";
 
 interface Props {

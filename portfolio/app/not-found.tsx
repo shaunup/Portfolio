@@ -44,7 +44,7 @@ export default function NotFound() {
             Looks like this path never made it into production.
           </h1>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            The page you're looking for doesn't exist, was moved, or the URL
+            The page you're looking for doesndoesn'tapos;t exist, was moved, or the URL
             has a typo. Let's get you back on track.
           </p>
         </div>

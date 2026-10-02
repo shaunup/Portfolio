@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MapPin, GraduationCap } from "lucide-react";
+import { ArrowRight, GraduationCap } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-wrapper";

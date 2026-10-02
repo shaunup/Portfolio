@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Search, FlaskConical, Blocks, TestTube } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { StaggerContainer, StaggerItem } from "@/components/ui/motion-wrapper";

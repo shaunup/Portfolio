@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
-import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-wrapper";
+import { FadeUp } from "@/components/ui/motion-wrapper";
 import { MediaPlaceholder } from "@/components/ui/media-placeholder";
 import { timeline } from "@/content/timeline";
 import { generatePageMetadata } from "@/lib/metadata";

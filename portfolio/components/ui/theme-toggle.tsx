@@ -2,24 +2,13 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export function ThemeToggle({ className }: { className?: string }) {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme, systemTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div className={cn("w-9 h-9 rounded-md", className)} aria-hidden="true" />
-    );
-  }
-
-  const isDark = resolvedTheme === "dark";
+  // Use systemTheme as the fallback before client hydration
+  const isDark = resolvedTheme === "dark" || (!resolvedTheme && systemTheme === "dark");
 
   return (
     <button

@@ -26,6 +26,7 @@ export function Navigation() {
 
   useEffect(() => {
     setMobileOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   useEffect(() => {

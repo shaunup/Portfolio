@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Download, ExternalLink } from "lucide-react";
-import { SectionHeader } from "@/components/ui/section-header";
-import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion-wrapper";
+import { Download } from "lucide-react";
+import { FadeUp } from "@/components/ui/motion-wrapper";
 import { TechTag } from "@/components/ui/tech-tag";
 import { profile } from "@/content/profile";
 import { getFeaturedProjects } from "@/content/projects";
