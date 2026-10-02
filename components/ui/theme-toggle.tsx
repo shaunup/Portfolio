@@ -1,14 +1,20 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
 export function ThemeToggle({ className }: { className?: string }) {
-  const { resolvedTheme, setTheme, systemTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  // Use systemTheme as the fallback before client hydration
-  const isDark = resolvedTheme === "dark" || (!resolvedTheme && systemTheme === "dark");
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = resolvedTheme === "dark";
+  const label = isDark ? "Switch to light mode" : "Switch to dark mode";
 
   return (
     <button
@@ -18,13 +24,13 @@ export function ThemeToggle({ className }: { className?: string }) {
         "transition-colors",
         className
       )}
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={mounted ? label : "Toggle color theme"}
+      title={mounted ? label : "Toggle color theme"}
     >
-      {isDark ? (
-        <Sun className="w-4 h-4" />
+      {mounted ? (
+        isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />
       ) : (
-        <Moon className="w-4 h-4" />
+        <span className="block w-4 h-4" aria-hidden="true" />
       )}
     </button>
   );
