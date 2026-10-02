@@ -1,0 +1,26 @@
+{
+  "name": "Shaun Pimenta",
+  "short_name": "Shaun Pimenta",
+  "description": "Multidisciplinary engineer building across embedded systems, software, machine learning, data, blockchain, and infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F8FA",
+  "theme_color": "#164E8C",
+  "icons": [
+    {
+      "src": "/icons/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+export const profile = {
+  name: "Shaun Pimenta",
+  initials: "SP",
+  title: "Multidisciplinary Engineer",
+  tagline: "Multidisciplinary engineer · Builder · Systems thinker",
+  headline: "I build systems that connect software, intelligence, and the physical world.",
+  description:
+    "I'm Shaun Pimenta, an engineer and computer science student who enjoys working across boundaries—from embedded hardware and robotics to full-stack applications, machine learning, data platforms, and production infrastructure. I'm most interested in problems where understanding the whole system matters.",
+  philosophy:
+    "I'm drawn to projects that force me to learn more than one layer of a system. A software interface makes more sense when I understand the data behind it. An embedded controller is more interesting when I can see the mechanical system it moves. A model is more useful when it becomes part of a dependable product.",
+  status: "Currently exploring opportunities in software, embedded systems, aerospace, robotics, and data.",
+  email: "[ADD EMAIL]",
+  github: "https://github.com/[ADD GITHUB USERNAME]",
+  linkedin: "https://linkedin.com/in/[ADD LINKEDIN]",
+  resumeUrl: "/documents/shaun-pimenta-resume.pdf",
+  education: {
+    degree: "[ADD DEGREE]",
+    field: "Computer Science",
+    institution: "[ADD INSTITUTION]",
+    graduationYear: "[ADD GRADUATION YEAR]",
+  },
+  values: [
+    {
+      title: "Curiosity without ego",
+      description:
+        "I'd rather ask a naive question and understand something correctly than pretend to know and build on a false foundation.",
+    },
+    {
+      title: "Understanding before abstraction",
+      description:
+        "Abstractions are useful precisely because someone understood the thing underneath them first. I try not to skip that step.",
+    },
+    {
+      title: "Reliability over spectacle",
+      description:
+        "A system that works consistently in real conditions is more valuable than one that looks impressive in a demo. I optimize for the former.",
+    },
+    {
+      title: "Learning by building",
+      description:
+        "Reading about a technology gives me a map. Building something with it gives me the territory. I need both.",
+    },
+  ],
+  domains: [
+    {
+      id: "embedded",
+      title: "Embedded Systems & Robotics",
+      description:
+        "Firmware for microcontrollers, motor control, sensor fusion, real-time systems, and the mechanical structures they inhabit.",
+      technologies: [
+        "C/C++",
+        "Arduino",
+        "FreeRTOS",
+        "Stepper Motors",
+        "I2C / SPI / UART",
+        "CAD",
+        "3D Printing",
+      ],
+      filterCategory: "embedded",
+      icon: "Cpu",
+      color: "blue",
+    },
+    {
+      id: "fullstack",
+      title: "Full-Stack & Mobile Development",
+      description:
+        "Web and mobile applications built from the database and API layer through to the UI, with an emphasis on performance and maintainability.",
+      technologies: [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "React Native",
+        "Node.js",
+        "PostgreSQL",
+        "FastAPI",
+      ],
+      filterCategory: "full-stack",
+      icon: "Layers",
+      color: "indigo",
+    },
+    {
+      id: "ml-data",
+      title: "Machine Learning & Data",
+      description:
+        "Pipelines for collecting and normalizing data, machine learning models for classification and forecasting, and tools for exploring and communicating results.",
+      technologies: [
+        "Python",
+        "PyTorch",
+        "scikit-learn",
+        "LangChain",
+        "TimescaleDB",
+        "Apache Airflow",
+        "Recharts",
+      ],
+      filterCategory: "machine-learning",
+      icon: "BrainCircuit",
+      color: "violet",
+    },
+    {
+      id: "blockchain",
+      title: "Blockchain & Distributed Systems",
+      description:
+        "Smart contract development, decentralized application architecture, and the cryptographic and economic primitives that make these systems work.",
+      technologies: [
+        "Solidity",
+        "Hardhat",
+        "ethers.js",
+        "IPFS",
+        "Ethereum",
+        "EVM",
+      ],
+      filterCategory: "blockchain",
+      icon: "Network",
+      color: "amber",
+    },
+    {
+      id: "infra",
+      title: "Cloud, Infrastructure & Performance",
+      description:
+        "Deploying and operating reliable systems: container orchestration, caching strategy, observability, database performance, and platform reliability.",
+      technologies: [
+        "Docker",
+        "GCP",
+        "Redis",
+        "Nginx",
+        "Vercel",
+        "GitHub Actions",
+        "New Relic",
+      ],
+      filterCategory: "infrastructure",
+      icon: "Server",
+      color: "teal",
+    },
+  ],
+  skills: {
+    languages: [
+      "TypeScript",
+      "JavaScript",
+      "Python",
+      "C/C++",
+      "PHP",
+      "Solidity",
+      "SQL",
+      "Bash",
+    ],
+    applicationDevelopment: [
+      "React",
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "REST APIs",
+      "GraphQL",
+    ],
+    embeddedHardware: [
+      "Arduino / AVR",
+      "FreeRTOS",
+      "I2C / SPI / UART",
+      "Stepper motor drivers",
+      "CAD (Fusion 360)",
+      "3D printing",
+      "PCB design basics",
+    ],
+    dataMl: [
+      "PyTorch",
+      "scikit-learn",
+      "LangChain",
+      "OpenAI API",
+      "TimescaleDB",
+      "Apache Airflow",
+      "pandas / NumPy",
+    ],
+    cloudInfrastructure: [
+      "Docker",
+      "Google Cloud Platform",
+      "Vercel",
+      "Nginx",
+      "GitHub Actions",
+      "New Relic",
+      "Cloudflare",
+    ],
+    engineeringTools: [
+      "Git",
+      "Hardhat",
+      "Query Monitor",
+      "Postman",
+      "Figma",
+      "Linear",
+    ],
+  },
+};
